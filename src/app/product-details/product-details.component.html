@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 card inner-card">
+      <h4><strong>Edycja produktu</strong></h4>
+      <hr>
+    <div *ngIf="product">
+
+      <div>
+
+        <label>
+          <h5>Nazwa produktu</h5>
+          <input [(ngModel)]="product.name" placeholder="name" />
+        </label>
+        <hr>
+        <label>
+          <h5>Opis produktu:</h5>
+          <input [(ngModel)]="product.description" placeholder="description" />
+        </label>
+        <hr>
+        <label>
+          <h5>Cena produktu 1:</h5>
+          <input [(ngModel)]="product.price1" placeholder="description" />
+        </label>
+        <hr>
+        <label>
+          <h5>Cena produktu 2:</h5>
+          <input [(ngModel)]="product.price2" placeholder="description" />
+        </label>
+        <hr>
+        <label>
+          <h5>Cena produktu 3:</h5>
+          <input [(ngModel)]="product.price3" placeholder="description" />
+        </label>
+        <hr>
+        <label>
+          <h5>Link do zdjęcia produktu:</h5>
+          <input [(ngModel)]="product.imgLink" placeholder="description" />
+        </label>
+        <hr>
+        <button (click)="goBack()">wstecz</button>
+        <button (click)="goBack()">zapsisz</button>
+
+      </div>
+
+    </div>
+    </div>
+  </div>
+</div>

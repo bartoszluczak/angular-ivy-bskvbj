@@ -1,0 +1,34 @@
+<h3><strong>Dodawanie produktów</strong>    </h3><hr>
+<form [formGroup]="addItemToList" (ngSubmit)="onSubmit()">
+    <label>
+        Nazwa produktu:
+        <input type="text" formControlName="productName">
+    </label>
+
+    <label>
+        Opis produktu:
+        <input type="text" formControlName="productDescription">
+    </label>
+
+    <label>
+        Cena 1:
+        <input type="text" formControlName="productPrice1">
+    </label>
+
+    <label>
+        Cena 2:
+        <input type="text" formControlName="productPrice2">
+    </label>
+
+    <label>
+        Cena 3:
+        <input type="text" formControlName="productPrice3">
+    </label>
+
+    <label>
+        Link do zdjęcia produktu:
+        <input type="text" formControlName="productIMGLink">
+    </label>
+    <hr>
+    <button type="submit" [disabled]="!addItemToList.valid">Dodaj produkt do listy</button>
+</form>

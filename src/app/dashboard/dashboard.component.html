@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 card shadow-sm">
+            <div class="inner-card col-md-7">
+                <app-add-item></app-add-item>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+    <div class="col-md-8 card shadow-sm bottom-container">
+    <h3><strong>Lista dostępnych produktów</strong></h3>
+    <hr>
+    
+        <div class="grid grid-pad">
+
+            <div class="module product">
+            
+                <ul *ngFor="let product of products" class="col-1-4">
+                    <div class="product-container">
+                    <h4>{{product.name}}</h4>
+                    <hr>
+                    <p>{{product.description}}</p>
+
+
+                    <button routerLink="/detail/{{product.id}}">Edytuj</button>
+                    <button (click)="onDelete(product.id)">Usuń produkt</button>
+                    </div>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    </div>
+</div>

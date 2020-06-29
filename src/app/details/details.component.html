@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-6 card inner-card">
+        
+      <div *ngIf="product">
+  
+            <img src="{{ product.imgLink }}" onerror="this.onerror=null;this.src='/assets/img/no_img.jpg';"height="auto" width="100%"/>
+            <h5 class="">{{product.name}}</h5><hr>
+            <p class="card-text">{{product.description}}</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <small class="text-muted">{{product.price1 | currency:'PLN'}}</small>
+              <small class="text-muted">{{product.price2 | currency:'PLN'}}</small>
+              <small class="text-muted">{{product.price3 | currency:'PLN'}}</small>
+          <button (click)="goBack()">wstecz</button>
+
+  
+      </div>
+      </div>
+    </div>
+  </div>
