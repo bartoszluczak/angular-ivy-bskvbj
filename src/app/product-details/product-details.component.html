@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-6 card inner-card">
+    <div class="col-md-7 card inner-card">
       <h4><strong>Edycja produktu</strong></h4>
       <hr>
     <div *ngIf="product">
@@ -8,40 +8,40 @@
         <img src="{{ product.imgLink }}" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/bartoszluczak/angular-ivy-bskvbj@master/src/assets/img/no_img.jpg';"height="auto" width="100%"/>
         <p>Zdjęcie produktu</p>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-6">
 
         <label>
           <h5>Nazwa produktu</h5>
-          <input [(ngModel)]="product.name" placeholder="name" />
+          <input class="form-control" [(ngModel)]="product.name" placeholder="name" />
         </label>
         <hr>
         <label>
           <h5>Opis produktu:</h5>
-          <input [(ngModel)]="product.description" placeholder="description" />
+          <input class="form-control" [(ngModel)]="product.description" placeholder="description" />
         </label>
         <hr>
         <label>
           <h5>Cena produktu 1:</h5>
-          <input [(ngModel)]="product.price1" placeholder="description" />
+          <input class="form-control" [(ngModel)]="product.price1" placeholder="description" />
         </label>
         <hr>
         <label>
           <h5>Cena produktu 2:</h5>
-          <input [(ngModel)]="product.price2" placeholder="description" />
+          <input class="form-control" [(ngModel)]="product.price2" placeholder="description" />
         </label>
         <hr>
         <label>
           <h5>Cena produktu 3:</h5>
-          <input [(ngModel)]="product.price3" placeholder="description" />
+          <input class="form-control" [(ngModel)]="product.price3" placeholder="description" />
         </label>
         <hr>
         <label>
           <h5>Link do zdjęcia produktu:</h5>
-          <input [(ngModel)]="product.imgLink" placeholder="description" />
+          <textarea class="form-control" [(ngModel)]="product.imgLink" placeholder="description" cols="100" rows="5"></textarea>
         </label>
         <hr>
-        <button (click)="goBack()">wstecz</button>
-        <button (click)="goBack()">zapsisz</button>
+        <button (click)="goBack()" class="btn btn-outline-dark">wstecz</button>
+        <button (click)="goBack()"class="btn btn-outline-dark">zapsisz</button>
 
       </div>
       
