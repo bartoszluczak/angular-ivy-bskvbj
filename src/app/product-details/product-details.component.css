@@ -6,3 +6,9 @@
 .inner-card {
     padding: 20px;
 }
+.left {
+  position: absolute;
+  right: 10px;
+  top: 90px;
+  text-align: right;
+}

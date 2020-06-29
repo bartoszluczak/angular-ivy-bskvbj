@@ -4,8 +4,11 @@
       <h4><strong>Edycja produktu</strong></h4>
       <hr>
     <div *ngIf="product">
-
-      <div>
+      <div class='col-md-6 left'>
+        <img src="{{ product.imgLink }}" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/gh/bartoszluczak/angular-ivy-bskvbj@master/src/assets/img/no_img.jpg';"height="auto" width="100%"/>
+        <p>Zdjęcie produktu</p>
+      </div>
+      <div class="col-md-4">
 
         <label>
           <h5>Nazwa produktu</h5>
@@ -41,7 +44,7 @@
         <button (click)="goBack()">zapsisz</button>
 
       </div>
-
+      
     </div>
     </div>
   </div>
